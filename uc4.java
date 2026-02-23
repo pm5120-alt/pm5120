@@ -1,4 +1,5 @@
 package github.pm5120
+    
 public class uc4 {
     public static void main(String[] args) {
 
