@@ -2,26 +2,43 @@ public class Factors {
 
     public static int[] getFactors(int n) {
         int count = 0;
-        for(int i=1;i<=n;i++) if(n%i==0) count++;
 
-        int[] arr = new int[count];
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }
+
+        int[] factors = new int[count];
         int index = 0;
 
-        for(int i=1;i<=n;i++)
-            if(n%i==0) arr[index++] = i;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                factors[index] = i;
+                index++;
+            }
+        }
 
-        return arr;
+        return factors;
     }
 
     public static int sum(int[] arr) {
-        int s=0;
-        for(int x:arr) s+=x;
-        return s;
+        int total = 0;
+
+        for (int x : arr) {
+            total += x;
+        }
+
+        return total;
     }
 
     public static int product(int[] arr) {
-        int p=1;
-        for(int x:arr) p*=x;
-        return p;
+        int result = 1;
+
+        for (int x : arr) {
+            result *= x;
+        }
+
+        return result;
     }
 }

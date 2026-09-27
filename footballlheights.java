@@ -1,24 +1,40 @@
 public class Heights {
 
-    public static int sum(int[] arr){
-        int s=0;
-        for(int x:arr) s+=x;
-        return s;
+    public static int sum(int[] arr) {
+        int total = 0;
+
+        for (int x : arr) {
+            total += x;
+        }
+
+        return total;
     }
 
-    public static double mean(int[] arr){
-        return (double)sum(arr)/arr.length;
+    public static double mean(int[] arr) {
+        return (double) sum(arr) / arr.length;
     }
 
-    public static int min(int[] arr){
-        int m=Integer.MAX_VALUE;
-        for(int x:arr) m=Math.min(m,x);
-        return m;
+    public static int min(int[] arr) {
+        int smallest = Integer.MAX_VALUE;
+
+        for (int x : arr) {
+            if (x < smallest) {
+                smallest = x;
+            }
+        }
+
+        return smallest;
     }
 
-    public static int max(int[] arr){
-        int m=Integer.MIN_VALUE;
-        for(int x:arr) m=Math.max(m,x);
-        return m;
+    public static int max(int[] arr) {
+        int largest = Integer.MIN_VALUE;
+
+        for (int x : arr) {
+            if (x > largest) {
+                largest = x;
+            }
+        }
+
+        return largest;
     }
 }
