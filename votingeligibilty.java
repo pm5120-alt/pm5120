@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class VotingCheck {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] ages = new int[10];
@@ -10,16 +11,17 @@ public class VotingCheck {
             ages[i] = sc.nextInt();
 
             if (ages[i] < 0) {
-                System.err.println("Invalid age.");
-                System.exit(0);
+                System.out.println("Invalid age.");
+                return;
             }
         }
 
         for (int age : ages) {
-            if (age >= 18)
+            if (age >= 18) {
                 System.out.println(age + " can vote");
-            else
+            } else {
                 System.out.println(age + " cannot vote");
+            }
         }
     }
 }
