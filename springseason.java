@@ -1,9 +1,15 @@
 public class SpringSeason {
 
     public static boolean isSpring(int month, int day) {
-        return (month == 3 && day >= 20) ||
-               (month == 4 || month == 5) ||
-               (month == 6 && day <= 20);
+        if (month == 3 && day >= 20) {
+            return true;
+        }
+
+        if (month == 4 || month == 5) {
+            return true;
+        }
+
+        return month == 6 && day <= 20;
     }
 
     public static void main(String[] args) {
