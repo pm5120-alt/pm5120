@@ -1,8 +1,8 @@
 public class AthleteRun {
 
     public static double calculateRounds(double a, double b, double c) {
-        double perimeter = a + b + c;
-        return 5000 / perimeter;
+        double trackLength = a + b + c;
+        return 5000 / trackLength;
     }
 
     public static void main(String[] args) {
